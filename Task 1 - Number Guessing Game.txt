@@ -1,0 +1,25 @@
+                                     Number Guessing Game      
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int num = rand() % 10 + 1; 
+    int guess;
+
+    cout << "Guess the number between 1 to 10 : ";
+    cin >> guess;
+
+    while (guess != num) {
+        if (guess > num)
+            cout << "Too high! Guess again : ";
+        else
+            cout << "Too low! Guess again : ";
+        cin >> guess;
+    }
+
+    cout << "Your guess is right!" << endl;
+    return 0;
+}
